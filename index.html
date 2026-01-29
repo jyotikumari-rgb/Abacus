@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Abacus Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="bg-white rounded-2xl shadow-xl p-8 max-w-4xl w-full text-center border border-gray-100">
+        
+        <h1 class="text-slate-600 text-lg font-semibold mb-2 tracking-wide">Match the Number on the Abacus</h1>
+        <div id="target-number" class="text-6xl font-bold text-blue-600 mb-10 tracking-wider transition-all duration-300">
+            00000
+        </div>
+
+        <div class="bg-[#eff6ff] rounded-xl p-8 shadow-sm relative mx-auto max-w-3xl border border-blue-50">
+            
+            <div class="relative mb-6">
+                <div class="flex justify-around items-end h-64 relative z-10 px-8" id="abacus-rods">
+                </div>
+
+                <div class="absolute bottom-0 left-0 right-0 h-12 wood-bar rounded-lg z-20 flex items-center justify-around text-white font-bold text-lg shadow-lg mx-6">
+                     <div class="w-12 text-center">T-Th</div>
+                     <div class="w-12 text-center">Th</div>
+                     <div class="w-12 text-center">H</div>
+                     <div class="w-12 text-center">T</div>
+                     <div class="w-12 text-center">O</div>
+                </div>
+            </div>
+
+            <div class="flex justify-around items-center px-8" id="controls-container">
+            </div>
+        </div>
+
+        <div id="current-value" class="text-3xl font-bold text-slate-700 mb-2 mt-6 transition-all duration-300">
+            0
+        </div>
+
+        <p id="status-message" class="text-slate-600 mb-8 font-medium min-h-[1.5rem]">
+            Keep adjusting the beads.
+        </p>
+
+        <button id="new-question-btn" class="btn-new-question font-bold py-3 px-10 rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-[#65a30d] focus:ring-opacity-50 text-lg">
+            New Question
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

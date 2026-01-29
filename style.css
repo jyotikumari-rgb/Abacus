@@ -1,0 +1,101 @@
+body {
+    background-color: #f3f4f6;
+}
+
+.rod {
+    width: 6px;
+    background-color: #8B4513;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 3px;
+    z-index: 5;
+}
+
+.bead {
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 
+        inset -2px -2px 6px rgba(0,0,0,0.3), 
+        inset 2px 2px 6px rgba(255,255,255,0.4), 
+        1px 1px 3px rgba(0,0,0,0.2);
+    transition: bottom 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 15;
+}
+
+.bead-0 { background-color: #a3e635; border: 1px solid #84cc16; } 
+.bead-1 { background-color: #e879f9; border: 1px solid #d946ef; }
+.bead-2 { background-color: #60a5fa; border: 1px solid #3b82f6; }
+.bead-3 { background-color: #facc15; border: 1px solid #eab308; }
+.bead-4 { background-color: #f87171; border: 1px solid #ef4444; }
+
+.control-btn {
+    width: 36px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-minus {
+    background-color: #93c5fd;
+}
+
+.btn-minus:hover {
+    background-color: #60a5fa;
+}
+
+.btn-plus {
+    background-color: #3b82f6;
+}
+
+.btn-plus:hover {
+    background-color: #2563eb;
+}
+
+.wood-bar {
+    background-color: #92400e;
+    background-image: linear-gradient(to bottom, #92400e, #78350f);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-new-question {
+    background-color: #65a30d;
+    color: white;
+    transition: all 0.2s;
+}
+
+.btn-new-question:hover {
+    background-color: #4d7c0f;
+    transform: translateY(-1px);
+}
+
+.btn-new-question:active {
+    transform: translateY(1px);
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.animate-pop {
+    animation: pop 0.2s ease-in-out;
+}
+
+.match-success {
+    color: #16a34a;
+    animation: pop 0.5s ease-in-out;
+}
